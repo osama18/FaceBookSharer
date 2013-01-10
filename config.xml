@@ -5,6 +5,7 @@
         version     = "1.0.0">
 
 <name>ChildBrowser Demo</name>
+<gap:plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
 
 <feature name="http://plugins.phonegap.com/ChildBrowser/1.0.1" />
 <feature name="http://api.phonegap.com/1.0/network" />
