@@ -1,14 +1,28 @@
+<!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
-        <h1>Child Browser Demo</h1>
-        <a onClick="launchBrowser()" href="#">What does it do?</a>
-    </body>
-    <script src="phonegap.js"></script>
-    <script src="childbrowser.js"></script>
-    <script>
-        function launchBrowser() {
-            window.plugins.childBrowser.openExternal('http://www.facebook.com/sharer/sharer.php?s=100&amp%3Bp%5Btitle%5D=Title&amp%3Bp%5Bsummary%5D=summary&amp%3Bp%5Burl%5D=www.location.com%3B')
-        }
+  <head>
+    <title>Contact Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for PhoneGap to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // PhoneGap is ready
+    //
+    function onDeviceReady() {
+        var myContact = navigator.contacts.create({"displayName": "DemoTest"});
+        myContact.gender = "male";
+        
+    }
+
+
     </script>
+  </head>
+  <body>
+    <h1>Example</h1>
+    <p>Create Contact</p>
+  </body>
 </html>
